@@ -7,7 +7,8 @@ import numpy as np
 
 class Progenitor:
 
-    grid_file = '/home/jomesa/sdb/progenitors/grid_progenitors_20201005.txt'
+    # grid_file = '/home/jomesa/sdb/progenitors/grid_progenitors_20201005.txt'
+    grid_file = '/Volumes/T3_2TB/sdb/grid_progenitors/grid_progenitors_20201005.txt'
     grid = np.genfromtxt(grid_file, dtype=None, names=True)
 
     def __init__(self, m_i, z, level, rot=0.0, fh=0.0,
@@ -35,7 +36,7 @@ class Progenitor:
         self.age = selected_progenitor['age']
         self.m_core = selected_progenitor['m_core']
 
-        self.progenitor_name = selected_progenitor()
+        self.progenitor_name = self.create_progenitor_name()
 
     def select_progenitor(self):
         condition = \
@@ -111,7 +112,8 @@ def create_logdir_name(progenitor, m_env):
 
 if __name__ == "__main__":
 
-    grid_zip_file = '/home/jomesa/sdb/progenitors/progenitors_20201005.zip'
+    # grid_zip_file = '/home/jomesa/sdb/progenitors/progenitors_20201005.zip'
+    grid_zip_file = '/Volumes/T3_2TB/sdb/grid_progenitors/progenitors_20201005.zip'
 
     grid_name = 'sdb'
     job_description = f'work_{grid_name}'
