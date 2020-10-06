@@ -7,7 +7,7 @@ import numpy as np
 
 class Progenitor:
 
-    grid_file = 'grid_progenitors_20201005.txt'
+    grid_file = '/home/jomesa/sdb/progenitors/grid_progenitors_20201005.txt'
     grid = np.genfromtxt(grid_file, dtype=None, names=True)
 
     def __init__(self, m_i, z, level, rot=0.0, fh=0.0,
