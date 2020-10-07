@@ -50,8 +50,8 @@ end
 out_dir = "../logs"
 Dir.mkdir(out_dir) unless File.exist?(out_dir)
 
-history_dir = "../history"
-Dir.mkdir(history_dir) unless File.exist?(history_dir)
+# history_dir = "../history"
+# Dir.mkdir(history_dir) unless File.exist?(history_dir)
 
 ###############################################################################
 
@@ -348,10 +348,10 @@ f.each do |f_h|
 
 	###############################################################################
 
-	# name_string = "mi" + m.to_s + "_mhec" + m_he_core.to_s +
-	# 	"_menv" + m_env.to_s +
-	# 	"_z" + z.to_s + "_y" + "#{y.round(5)}" +
-	# 	"_fhe" + f_he.to_s + "_" + mixing
+	name_string = "mi" + m.to_s + "_mhec" + m_he_core.to_s +
+		"_menv" + m_env.to_s +
+		"_z" + z.to_s + "_y" + "#{y.round(5)}" +
+		"_fhe" + f_he.to_s + "_" + mixing
 
 	logs = out_dir + "/" + log_dir
 	Dir.mkdir(logs) unless File.exist?(logs)
