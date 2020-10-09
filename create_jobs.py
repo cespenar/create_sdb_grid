@@ -95,7 +95,7 @@ def make_replacements(file_in, file_out, replacements, remove_original=False):
 
 def create_logdir_name(progenitor, m_env):
         return f"logs_mi{progenitor.m_i}_" + \
-            f"menv{m_env}_" + \
+            f"menv{round(m_env, 4)}_" + \
             f"rot{progenitor.rot}_" + \
             f"z{progenitor.z}_" + \
             f"y{progenitor.y}_" + \
