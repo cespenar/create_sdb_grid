@@ -119,6 +119,7 @@ if __name__ == "__main__":
     job_description = f'work_{grid_name}'
     template = 'work-r11701'
     progenitors_dir = '../progenitors/'
+    logs = '../logs'
 
     #########################################################################################
 
@@ -146,6 +147,9 @@ if __name__ == "__main__":
 
     #########################################################################################
 
+    if not os.path.isdir(logs):
+        os.mkdir(logs)
+    
     for pro in progenitors:
         with ZipFile(grid_zip_file, 'r') as archive:
             models = [os.path.basename(name) for name in archive.namelist()]
