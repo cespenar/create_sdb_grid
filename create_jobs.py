@@ -119,7 +119,7 @@ if __name__ == "__main__":
     job_description = f'work_{grid_name}'
     template = 'work-r11701'
     progenitors_dir = '../progenitors/'
-    logs = '../logs'
+    logs = 'logs'
 
     #########################################################################################
 
